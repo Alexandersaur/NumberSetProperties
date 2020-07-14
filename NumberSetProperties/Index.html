@@ -66,17 +66,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Number Set Properties (Sum of all fears)</h1>
-                <p class="lead">You can customize the template colors</p>
+                <h1 class="mt-5">Number Set Properties</h1>
+                <p class="lead">(Sum of all fears)</p>
                 <ul class="list-unstyled">
-                    <li>This page is for a description of the Javascript exercise</li>
-                    <li>You should include information about what the code does</li>
+                    <li>Given a number K and five sample numbers, determine whether a valid combination exists that add up to K</li>
+                    <li>The solution to this challenge demonstrates an ability to use arrays effectively.</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <input id="numberSetK" class="form-control KClass" placeholder="Enter value for K" />
+                <input id="numberSetK" class="form-control" placeholder="Enter value for K" />
             </div>
             <div class="col">
                 <input id="numberSetInput1" class="form-control numberSetInputClass" placeholder="Enter number 1" />
@@ -130,15 +130,15 @@
             for (let index = 0; index < array.length - 1; index++) {
                 if (array[index] > k)
                     continue;
-                    let solution = k - array[index];
-                    if (array.indexOf(solution, index + 1) > -1) {
-                        message = `A solution was found for a K value of ${k}`;
-                        break;
-                    }
-                    else {
-                        messgae = `No solution was found for a K value of ${k}`;
-                        break;
-                    }
+                let solution = k - array[index];
+                if (array.indexOf(solution, index + 1) > -1) {
+                    message = `A solution was found for a K value of ${k}`;
+                    break;
+                }
+                else {
+                    messgae = `No solution was found for a K value of ${k}`;
+                    break;
+                }
             }
             $("#numberSetOutput").text(message);
         });
