@@ -114,7 +114,7 @@
     
     <script>
         $("#numberSetButton").on("click", function () {
-            let k = parseInt($("numberSetK").val());
+            let k = parseInt($("#numberSetK").val());
             let num1 = parseInt($("#numberSetInput1").val());
             let num2 = parseInt($("#numberSetInput2").val());
             let num3 = parseInt($("#numberSetInput3").val());
@@ -136,7 +136,7 @@
                     break;
                 }
                 else {
-                    messgae = `No solution was found for a K value of ${k}`;
+                    message = `No solution was found for a K value of ${k}`;
                     break;
                 }
             }
