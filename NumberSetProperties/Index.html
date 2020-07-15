@@ -34,13 +34,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Index.html">
                             Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html">Solve</a>
+                        <a class="nav-link active" href="/Solve.html">Solve</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Code.html">Code</a>
@@ -74,43 +74,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Number Set Properties</h1>
-                <p class="lead">(Sum of all fears)</p>
+                <h1 class="mt-5">Number Set Properties (Sum of all fears)</h1>
+                <p class="lead">This page will display your JS exercise</p>
                 <ul class="list-unstyled">
-                    <li>Given a number K and five sample numbers, determine whether a valid combination exists that add up to K</li>
-                    <li>The solution to this challenge demonstrates an ability to use arrays effectively.</li>
+                    <li>The Javascript Exercise</li>
+                    <li>Is placed on this page</li>
                 </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <input id="numberSetK" class="form-control" placeholder="Enter value for K" />
-            </div>
-            <div class="col">
-                <input id="numberSetInput1" class="form-control numberSetInputClass" placeholder="Enter number 1" />
-            </div>
-            <div class="col">
-                <input id="numberSetInput2" class="form-control numberSetInputClass" placeholder="Enter number 2" />
-            </div>
-            <div class="col">
-                <input id="numberSetInput3" class="form-control numberSetInputClass" placeholder="Enter number 3" />
-            </div>
-            <div class="col">
-                <input id="numberSetInput4" class="form-control numberSetInputClass" placeholder="Enter number 4" />
-            </div>
-            <div class="col">
-                <input id="numberSetInput5" class="form-control numberSetInputClass" placeholder="Enter number 5" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button id="numberSetButton" class="btn btn-primary">Calculate</button>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col">
-                <p id="numberSetOutput"></p>
             </div>
         </div>
     </div>
@@ -119,38 +88,6 @@
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
-    <script>
-        $("#numberSetButton").on("click", function () {
-            let k = parseInt($("#numberSetK").val());
-            let num1 = parseInt($("#numberSetInput1").val());
-            let num2 = parseInt($("#numberSetInput2").val());
-            let num3 = parseInt($("#numberSetInput3").val());
-            let num4 = parseInt($("#numberSetInput4").val());
-            let num5 = parseInt($("#numberSetInput5").val());
-            let array = new Array();
-            array.push(num1);
-            array.push(num2);
-            array.push(num3);
-            array.push(num4);
-            array.push(num5);
-            let message = "";
-            for (let index = 0; index < array.length - 1; index++) {
-                if (array[index] > k)
-                    continue;
-                let solution = k - array[index];
-                if (array.indexOf(solution, index + 1) > -1) {
-                    message = `A solution was found for a K value of ${k}`;
-                    break;
-                }
-                else {
-                    message = `No solution was found for a K value of ${k}`;
-                    break;
-                }
-            }
-            $("#numberSetOutput").text(message);
-        });
-    </script>
 
 </body>
 
