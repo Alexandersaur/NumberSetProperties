@@ -88,6 +88,7 @@
     <Content Include="css\jquery.pagepiling.css" />
     <Content Include="css\layerslider.css" />
     <Content Include="css\plugins.css" />
+    <Content Include="css\prism %281%29.css" />
     <Content Include="css\rtl.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
@@ -271,6 +272,7 @@
     <Content Include="js\particles.min.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="js\prism %281%29.js" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
   </ItemGroup>
