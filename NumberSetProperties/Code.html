@@ -21,6 +21,19 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!--<link href="css/style.css" rel="stylesheet" />-->
+    <style>
+        .jumbotron {
+            background-image: url('projart4.jpg');
+            background-size: cover;
+            border-bottom: 6px solid black;
+            font: white;
+            font-weight: 800;
+            font-size: 50px;
+            text-transform: uppercase;
+            text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 10px 23px rgba(0,0,0,0.1);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -56,8 +69,8 @@
                     </li>-->
                 </ul>
                 <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        Other Mini Projects
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                        Mini Projects
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="//jeremysteward-cf-1.netlify.app/">Taco Cat</a>
@@ -71,51 +84,59 @@
     </nav>
 
     <!-- Page Content -->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-white text-center">
+            <h1>Behind the scenes: JS Code</h1>
+            <p><!--Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.--></p>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">The underlying JS code</h1>
+                <!--<h1 class="mt-5">The underlying JS code</h1>
                 <p class="lead">Behind the scenes</p>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled">-->
                     <!--<li>Code with highlighter</li>
                     <li>Will display on this page</li>-->
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-            <pre>
-            <code class="language-javascript">
-            <script>
-                $("#numberSetButton").on("click", function () {
-                    let k = parseInt($("#numberSetK").val());
-                    let num1 = parseInt($("#numberSetInput1").val());
-                    let num2 = parseInt($("#numberSetInput2").val());
-                    let num3 = parseInt($("#numberSetInput3").val());
-                    let num4 = parseInt($("#numberSetInput4").val());
-                    let num5 = parseInt($("#numberSetInput5").val());
-                    let array = new Array();
-                    array.push(num1);
-                    array.push(num2);
-                    array.push(num3);
-                    array.push(num4);
-                    array.push(num5);
-                    let message = "";
-                    for (let index = 0; index < array.length - 1; index++) {
-                        if (array[index] > k)
-                            continue;
-                        let solution = k - array[index];
-                        if (array.indexOf(solution, index + 1) > -1) {
-                            message = `A solution was found for a K value of ${k}`;
-                            break;
+            <div class="col-6 offset-3" >
+                <pre>
+                <code class="language-javascript">
+                <script>
+                    $("#numberSetButton").on("click", function () {
+                        let k = parseInt($("#numberSetK").val());
+                        let num1 = parseInt($("#numberSetInput1").val());
+                        let num2 = parseInt($("#numberSetInput2").val());
+                        let num3 = parseInt($("#numberSetInput3").val());
+                        let num4 = parseInt($("#numberSetInput4").val());
+                        let num5 = parseInt($("#numberSetInput5").val());
+                        let array = new Array();
+                        array.push(num1);
+                        array.push(num2);
+                        array.push(num3);
+                        array.push(num4);
+                        array.push(num5);
+                        let message = "";
+                        for (let index = 0; index < array.length - 1; index++) {
+                            if (array[index] > k)
+                                continue;
+                            let solution = k - array[index];
+                            if (array.indexOf(solution, index + 1) > -1) {
+                                message = `A solution was found for a K value of ${k}`;
+                                break;
+                            }
+                            else {
+                                message = `No solution was found for a K value of ${k}`;
+                                break;
+                            }
                         }
-                        else {
-                            message = `No solution was found for a K value of ${k}`;
-                            break;
-                        }
-                    }
-                    $("#numberSetOutput").text(message);
-                });
+                        $("#numberSetOutput").text(message);
+                    });
 </script>
                 </code>
             </pre>
