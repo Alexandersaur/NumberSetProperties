@@ -275,8 +275,8 @@
     <Content Include="js\plugins.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\prism %281%29.js" />
-    <Content Include="prism %282%29.css" />
-    <Content Include="prism %282%29.js" />
+    <Content Include="css\prism %282%29.css" />
+    <Content Include="js\prism %282%29.js" />
     <Content Include="projart4.jpg" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
